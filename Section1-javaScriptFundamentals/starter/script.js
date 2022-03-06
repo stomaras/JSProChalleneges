@@ -107,6 +107,18 @@ n = n - 1;
 console.log(n);// 10 result
 
 
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean('Jonas'));
+console.log(Boolean({}));
+
+const favourite = prompt("What's your favorite number");
+console.log(favourite);
+console.log(typeof favourite);
+
+
 
 
 
