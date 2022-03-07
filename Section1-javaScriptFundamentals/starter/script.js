@@ -59,7 +59,7 @@ if (marksBMI > johnsBMI) {
 ///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////
 
-// Template Literals
+////////////////// Template Literals /////////////////////////////////
 const firstName = 'Spyros';
 const job = 'programmer';
 const birthYear = 1997;
@@ -114,9 +114,34 @@ console.log(Boolean(undefined));
 console.log(Boolean('Jonas'));
 console.log(Boolean({}));
 
-const favourite = prompt("What's your favorite number");
-console.log(favourite);
-console.log(typeof favourite);
+//const favourite = prompt("What's your favorite number");
+//console.log(favourite);
+//console.log(typeof favourite);
+
+///////// Logical Operators ///////////////
+const hasDriversLicense = true;
+const hasGoodVision = true;
+
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasDriversLicense);
+
+const shouldDrive = hasDriversLicense && hasGoodVision;
+
+// if (shouldDrive) {
+//     console.log("Sarah is able to drive!")
+// } else {
+//     console.log("Someone else should drive...")
+// }
+
+const isTired = true; // C
+console.log(hasDriversLicense || hasGoodVision || isTired);
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+    console.log("Sarah is able to drive!");
+} else {
+    console.log("Someone else should drive...");
+}
 
 
 
