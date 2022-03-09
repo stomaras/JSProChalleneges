@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>JS Select Topmost Elements</title>
+  </head>
+  <body>
+    <p id="mark">This is a paragraph of text.</p>
+    <p>This is another paragraph of text.</p>
+
+    <p class="test">This is a paragraph of text.</p>
+    <div class="block test">This is another paragraph of text.</div>
+    <p>This is one more paragraph of text.</p>
+
+    <script>
+      alert(document.documentElement.getAttribute("lang"));
+      document.body.style.background = "white";
+
+      // selecting an element by id
+      var el = document.getElementById("mark");
+      el.style.color = "blue";
+      console.log(ell);
+
+      console.log(el);
+      el.style.background = "yellow";
+
+      // selecting an element by className
+      let cl = document.getElementsByClassName("test");
+      document.write("Number of selected elements: " + cl.length);
+      cl[0].style.fontWeight = "bold";
+    </script>
+  </body>
+</html>
