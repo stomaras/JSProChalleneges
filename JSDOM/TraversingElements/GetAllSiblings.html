@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="menu">
+      <li>Home</li>
+      <li>Products</li>
+      <li class="current">Customer Support</li>
+      <li>Careers</li>
+      <li>Investors</li>
+      <li>News</li>
+      <li>About Us</li>
+    </ul>
+
+    <script>
+      /*
+        Get all siblings of an element
+
+        To get all siblings of an element, we'll use the logic:
+            - First, select the parent of the element whose siblings that you want to find.
+            - Second, select the first child element pf that parent element
+            - Third, add the first element to an array of siblings
+            - Fourth, select the next sibling of the first element
+        */
+
+      function getSiblings(e) {
+        // for collecting siblings
+        let siblings = [];
+        if (!e.parentNode) {
+          return siblings;
+        }
+
+        // first child of the parent node
+        let sibling = e.parentNode.firstChild;
+        console.log(sibling);
+        // collection siblings
+        while (sibling) {
+          if (sibling.nodeType === 1 && sibling !== e) {
+            siblings.push(sibling);
+          }
+          sibling = sibling.nextSibling;
+        }
+        return siblings;
+      }
+
+      let current = document.querySelector(".current");
+      let siblings = getSiblings(current);
+      siblingsText = siblings.map((e) => e.innerHTML);
+      console.log(siblingsText);
+    </script>
+  </body>
+</html>
